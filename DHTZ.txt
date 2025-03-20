@@ -1,0 +1,44 @@
+#include <DHTZ.h>
+#include <Arduino.h>
+
+long t,h;
+
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void DHTZ::DHTZInit()
+{
+    dht.begin();
+}
+
+long DHTZ::DHTZReadTemp()
+{
+    t = dht.readTemperature();
+    Serial.print("Temp :");
+    Serial.println(t);
+
+    if (isnan(t)) {
+      Serial.println(F("Failed to read from DHT sensor!"));
+      return 0;
+    }
+    return t;
+}
+
+long DHTZ::DHTZReadHumid()
+{
+    h = dht.readHumidity();
+    Serial.print("Humi :");
+    Serial.println(h);
+
+    if (isnan(h)) {
+      Serial.println(F("Failed to read from DHT sensor!"));
+      return 0;
+    }
+    return h;
+}
+
+
+void DHTZ::DHTZAlarmCheck()
+{
+    
+}

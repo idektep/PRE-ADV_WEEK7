@@ -1,0 +1,10 @@
+#ifndef ULTRA_H
+#define ULTRA_H
+
+class Ultra
+{
+  public:
+    void Ultrapin();
+    void checkDistance(int collision_distance);
+};
+#endif

@@ -1,0 +1,15 @@
+#include <Arduino.h>
+#include "AGV.h"
+#include "Ultra.h"
+
+AGV a;
+Ultra s;
+
+void setup() {
+  a.pinsetup();
+  s.Ultrapin();
+}
+
+void loop() {
+  a.forward(1000);
+}

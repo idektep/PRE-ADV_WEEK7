@@ -1,0 +1,40 @@
+#define TRIG 5   // Trig pin pin5
+#define ECHO 35  // Echo pin pin35
+
+AGV __; 
+
+long microsecondsToCentimeters(long microseconds)  
+{
+  return microseconds / 29 / 2;  
+}
+
+void Ultra::Ultrapin()
+{
+  pinMode(TRIG, OUTPUT);
+  pinMode(ECHO, INPUT);
+}
+
+void Ultra::checkDistance(int collision_distance) {
+  while (1) {
+    long duration, distance;
+    digitalWrite(TRIG, LOW);
+    delayMicroseconds(2);
+    digitalWrite(TRIG, HIGH);
+    delayMicroseconds(5);
+    digitalWrite(TRIG, LOW);
+    duration = pulseIn(ECHO, HIGH);
+    distance = microsecondsToCentimeters(duration);
+
+    Serial.print("distance =  ");  
+    Serial.println(distance);      
+    delay(10);
+    __.forward(__);
+
+
+    if (distance <= collision_distance && distance != 0) {
+      __.stop();
+      delay(500);
+      break;
+    }
+  }
+}

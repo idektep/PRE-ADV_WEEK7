@@ -1,0 +1,20 @@
+#ifndef AGV_H
+#define AGV_H
+
+class AGV
+{
+public:
+    void pinsetup();
+    void forward(int d);
+    void backward(int d);
+    void turnleft(int d);
+    void turnright(int d);
+    void slideleftfront(int d);
+    void slideleftback(int d);
+    void sliderightfront(int d);
+    void sliderightback(int d);
+    void slideleft(int d);
+    void slideright(int d);
+    void stop();
+};
+#endif

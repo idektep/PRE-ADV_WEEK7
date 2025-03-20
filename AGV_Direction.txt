@@ -1,0 +1,209 @@
+void AGV::forward(int d){
+  digitalWrite(LED_R, HIGH);
+  digitalWrite(LED_L, HIGH);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, HIGH);  //motor1
+  digitalWrite(MR_IN2, LOW);   //motor1
+  digitalWrite(MR_IN3, HIGH);  //motor2
+  digitalWrite(MR_IN4, LOW);   //motor2
+
+  digitalWrite(ML_IN3, HIGH);  //motor3
+  digitalWrite(ML_IN4, LOW);   //motor3
+  digitalWrite(ML_IN1, HIGH);  //motor4
+  digitalWrite(ML_IN2, LOW);   //motor4
+  delay(d);
+}
+void AGV::backward(int d){
+  digitalWrite(LED_R, HIGH);
+  digitalWrite(LED_L, HIGH);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, LOW);
+  digitalWrite(MR_IN2, HIGH);
+  digitalWrite(MR_IN3, LOW);
+  digitalWrite(MR_IN4, HIGH);
+  
+  digitalWrite(ML_IN1, LOW);
+  digitalWrite(ML_IN2, HIGH);
+  digitalWrite(ML_IN3, LOW);
+  digitalWrite(ML_IN4, HIGH);
+  delay(d);
+}
+void AGV::turnleft(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 1);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, HIGH);
+  digitalWrite(MR_IN2, LOW);
+  digitalWrite(MR_IN3, HIGH);
+  digitalWrite(MR_IN4, LOW);
+
+  digitalWrite(ML_IN1, LOW);
+  digitalWrite(ML_IN2, HIGH);
+  digitalWrite(ML_IN3, LOW);
+  digitalWrite(ML_IN4, HIGH);
+  delay(d);
+}
+void AGV::turnright(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 1);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, LOW);
+  digitalWrite(MR_IN2, HIGH);
+  digitalWrite(MR_IN3, LOW);
+  digitalWrite(MR_IN4, HIGH);
+  
+  digitalWrite(ML_IN1, HIGH);
+  digitalWrite(ML_IN2, LOW);
+  digitalWrite(ML_IN3, HIGH);
+  digitalWrite(ML_IN4, LOW);
+  delay(d);
+}
+void AGV::slideleft(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 1);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, LOW);
+  digitalWrite(MR_IN2, HIGH);
+  digitalWrite(MR_IN3, HIGH);
+  digitalWrite(MR_IN4, LOW);
+
+  digitalWrite(ML_IN1, LOW);
+  digitalWrite(ML_IN2, HIGH);
+  digitalWrite(ML_IN3, HIGH);
+  digitalWrite(ML_IN4, LOW);
+  delay(d);
+}
+void AGV::slideright(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 0);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, HIGH);
+  digitalWrite(MR_IN2, LOW);
+  digitalWrite(MR_IN3, LOW);
+  digitalWrite(MR_IN4, HIGH);
+
+  digitalWrite(ML_IN1, HIGH);
+  digitalWrite(ML_IN2, LOW);
+  digitalWrite(ML_IN3, LOW);
+  digitalWrite(ML_IN4, HIGH);
+  delay(d);
+}
+void slideleftfront(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 0);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, LOW);
+  digitalWrite(MR_IN2, LOW);
+  digitalWrite(MR_IN3, HIGH);
+  digitalWrite(MR_IN4, LOW);
+
+  digitalWrite(ML_IN1, LOW);
+  digitalWrite(ML_IN2, LOW);
+  digitalWrite(ML_IN3, HIGH);
+  digitalWrite(ML_IN4, LOW);
+  delay(d);
+}
+void slideleftback(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 0);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, LOW);
+  digitalWrite(MR_IN2, HIGH);
+  digitalWrite(MR_IN3, LOW);
+  digitalWrite(MR_IN4, LOW);
+
+  digitalWrite(ML_IN1, LOW);
+  digitalWrite(ML_IN2, HIGH);
+  digitalWrite(ML_IN3, LOW);
+  digitalWrite(ML_IN4, LOW);
+  delay(d);
+}
+void sliderightfront(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 0);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+  digitalWrite(MR_IN1, HIGH);
+  digitalWrite(MR_IN2, LOW);
+  digitalWrite(MR_IN3, LOW);
+  digitalWrite(MR_IN4, LOW);
+
+  digitalWrite(ML_IN1, HIGH);
+  digitalWrite(ML_IN2, LOW);
+  digitalWrite(ML_IN3, LOW);
+  digitalWrite(ML_IN4, LOW);
+  delay(d);
+}
+void sliderightback(int d){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 0);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, LOW);
+  digitalWrite(MR_IN2, LOW);
+  digitalWrite(MR_IN3, LOW);
+  digitalWrite(MR_IN4, HIGH);
+
+  digitalWrite(ML_IN1, LOW);
+  digitalWrite(ML_IN2, LOW);
+  digitalWrite(ML_IN3, LOW);
+  digitalWrite(ML_IN4, HIGH);
+  delay(d);
+}
+
+void AGV::stop(){
+  digitalWrite(LED_R, 0);
+  digitalWrite(LED_L, 0);
+  analogWrite(L_ENA, 200); //130-255
+  analogWrite(L_ENB, 200);
+  analogWrite(R_ENA, 200);
+  analogWrite(R_ENB, 200);
+
+  digitalWrite(MR_IN1, 0);  //motor1
+  digitalWrite(MR_IN2, 0);   //motor1
+  digitalWrite(MR_IN3, 0);  //motor2
+  digitalWrite(MR_IN4, 0);   //motor2
+
+  digitalWrite(ML_IN3, 0);  //motor3
+  digitalWrite(ML_IN4, 0);   //motor3
+  digitalWrite(ML_IN1, 0);  //motor4
+  digitalWrite(ML_IN2, 0);   //motor4
+  delay(100);
+}

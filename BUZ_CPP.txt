@@ -1,0 +1,15 @@
+#include <Arduino.h>
+#include "BUZ.h"
+
+#define BUZPin 18
+
+void BUZInit(){
+    pinMode(BUZPin, OUTPUT);
+}
+void BUZ_ON(int d){
+    //Add function
+}
+void BUZ_OFF(int d){
+    //Add function
+}
+

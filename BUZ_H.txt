@@ -1,0 +1,11 @@
+#ifndef BUZ_H
+#define BUZ_H
+
+class BUZ
+{
+public:
+    void BUZInit();
+    void BUZ_ON(int d);
+    void BUZ_OFF(int d);
+};
+#endif

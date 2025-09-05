@@ -1,0 +1,17 @@
+#ifndef LCD_H
+#define LCD_H
+
+#include <LiquidCrystal_I2C.h>
+
+class LCD
+{
+public:
+    void LcdInit();
+    void LcdShowLight();
+    void LcdNoLight();
+    void LcdDisplayDHT();
+    void LcdDisplay();
+    void LcdDisplayLDR();
+
+};
+#endif

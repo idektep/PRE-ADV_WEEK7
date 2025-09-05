@@ -1,0 +1,27 @@
+#include <Arduino.h>
+#include "LDR.h"
+#include "LCD.h"
+
+LCD __;
+
+#define LDRPin 34
+int val,ldr = 0;
+
+void LDR::LDRInit()
+{
+    pinMode(LDRPin, OUTPUT);
+}
+
+long LDR::ReadLDR()
+{
+    val = analogRead(LDRPin);
+    ldr = map(val, 0, 4095, 0, 400);
+    Serial.print("LDR ");
+    Serial.println(ldr);
+    delay(200);
+}
+
+void LDRAlarmCheck()
+{
+    
+}

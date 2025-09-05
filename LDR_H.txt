@@ -1,0 +1,11 @@
+#ifndef LDR_H
+#define LDR_H
+
+class LDR
+{
+public:
+    void LDRInit();
+    static long ReadLDR();
+    void LDRAlarmCheck();
+};
+#endif

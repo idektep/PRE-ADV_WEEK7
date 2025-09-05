@@ -27,7 +27,10 @@ void LCD::LcdNoLight()
 {
     lcd.noBacklight();
 }
-
+void LCD::LcdDisplayLDR()
+{
+    
+}
 void LCD::LcdDisplayDHT()
 {
 
@@ -43,3 +46,4 @@ void LCD::LcdDisplay()
         lcd.print(LCDText1);
         
 }
+

@@ -38,7 +38,8 @@ long DHTZ::DHTZReadHumid()
 }
 
 
-void DHTZ::DHTZAlarmCheck()
+void DHTZ::DHTZAlarmCheck(int temp)
 {
     
 }
+
